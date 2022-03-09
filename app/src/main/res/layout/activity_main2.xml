@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+  <EditText
+      android:id="@+id/editTextNum1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:ems="10"
+      android:hint="Digite um número"
+      android:inputType="numberDecimal"
+      android:textSize="22sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/editTextNum2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="64dp"
+      android:ems="10"
+      android:hint="Digite outro número"
+      android:inputType="numberDecimal"
+      android:textSize="22sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editTextNum1" />
+
+  <Button
+      android:id="@+id/buttonSomar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="124dp"
+      android:text="Somar"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toStartOf="@+id/buttonSubtrair"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editTextNum2" />
+
+  <Button
+      android:id="@+id/buttonSubtrair"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="124dp"
+      android:text="Subtrair"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/buttonSomar"
+      app:layout_constraintTop_toBottomOf="@+id/editTextNum2" />
+
+  <Button
+      android:id="@+id/buttonMult"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="116dp"
+      android:text="Multiplicar"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/buttonSomar" />
+
+  <Button
+      android:id="@+id/buttonDiv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="116dp"
+      android:onClick="funcao"
+      android:text="Dividir"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/buttonMult"
+      app:layout_constraintTop_toBottomOf="@+id/buttonSubtrair" />
+
+  <TextView
+      android:id="@+id/textViewResult"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dp"
+      android:text="O resultado é:"
+      android:textSize="30sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/buttonMult" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
