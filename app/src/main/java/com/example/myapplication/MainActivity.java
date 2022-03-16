@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
         tv1 = findViewById(R.id.textView);
         ed1 = findViewById(R.id.editTextCampoUm);
+
+        Intent intent_ = getIntent();
+
+        String nomeRecebido = (String) intent_.getSerializableExtra("nome123");
+        Toast.makeText(this, nomeRecebido, Toast.LENGTH_SHORT).show();
+
     }
 
     public void funcao(View v){

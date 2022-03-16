@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +8,8 @@ import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -15,7 +18,11 @@ import android.widget.Toast;
 public class MainActivity3 extends ListActivity {
 
     String[] CORES = new String[] {"Tela 1",
-            "Tela 2", "Janela de Diálogo"};
+            "Tela Calculadora",
+            "Janela de Diálogo",
+            "RadioGroup sem listener",
+            "RadioGroup com listener",
+    };
     ArrayAdapter<String> meuArrayAdapter;
     Intent i;
 
@@ -27,6 +34,19 @@ public class MainActivity3 extends ListActivity {
                 android.R.layout.simple_list_item_1, CORES);
 
         setListAdapter(meuArrayAdapter);
+
+        registerForContextMenu(getListView());
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        return super.onContextItemSelected(item);
     }
 
     @Override
@@ -52,6 +72,15 @@ public class MainActivity3 extends ListActivity {
             janela.setNegativeButton("Cancelar", null);
             janela.show();
         }
+        if(position == 3){
+            i = new Intent(MainActivity3.this, MainActivity5.class);
+            startActivity(i);
+        }
+        if(position == 4){
+            i = new Intent(MainActivity3.this, MainActivity6.class);
+            startActivity(i);
+        }
+
     }
     DialogInterface.OnClickListener ouvinteJanela = new DialogInterface.OnClickListener() {
         @Override
