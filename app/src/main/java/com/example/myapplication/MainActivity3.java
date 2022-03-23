@@ -22,6 +22,8 @@ public class MainActivity3 extends ListActivity {
             "Janela de Diálogo",
             "RadioGroup sem listener",
             "RadioGroup com listener",
+            "CheckBox & Spinner & Switch Button",
+            "TextWatcher"
     };
     ArrayAdapter<String> meuArrayAdapter;
     Intent i;
@@ -31,7 +33,7 @@ public class MainActivity3 extends ListActivity {
         super.onCreate(savedInstanceState);
 
         meuArrayAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, CORES);
+                R.layout.formato_lista, CORES);
 
         setListAdapter(meuArrayAdapter);
 
@@ -80,6 +82,15 @@ public class MainActivity3 extends ListActivity {
             i = new Intent(MainActivity3.this, MainActivity6.class);
             startActivity(i);
         }
+        if(position == 5){
+            i = new Intent(MainActivity3.this, MainActivity7.class);
+            startActivity(i);
+        }
+        if(position == 6){
+            i = new Intent(MainActivity3.this, MainActivity8.class);
+            startActivity(i);
+        }
+
 
     }
     DialogInterface.OnClickListener ouvinteJanela = new DialogInterface.OnClickListener() {
