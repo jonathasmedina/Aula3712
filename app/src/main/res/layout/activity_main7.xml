@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity7">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cornerRadius="30dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="88dp"
         android:text="Verifica Check"

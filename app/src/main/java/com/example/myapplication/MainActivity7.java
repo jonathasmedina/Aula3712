@@ -73,11 +73,12 @@ public class MainActivity7 extends AppCompatActivity {
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_list_item_1,
+                R.layout.meuspinner,
                 arrayListSpinner
         );
 
         spinner.setAdapter(arrayAdapter);
+        spinner.setSelection(0, false);
 
         //ouvinte spinner
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
